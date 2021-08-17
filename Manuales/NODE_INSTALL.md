@@ -16,11 +16,28 @@ El objetivo de este manual es tener instalado en el sistema operativo **Node.js*
 2. Click en el paquete de Windows Installer (.msi) [De 32 o 64 bits dependiendo de su computadora]
 3. Ir a la carpeta de descarga y ejecutar el instalador
 ## Para Linux
+Si quieres revisar por ti mismo anda a la [Guía de instalación general](https://nodejs.org/en/download/package-manager/)
 
+### Debian and Ubuntu
+1. Ir a la página [Instrucciones de Instalación](https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions)
+2. Para instalar **Node.js v16.x**:
+```sh
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
+# Using Debian, as root
+curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+apt-get install -y nodejs
+```
+
+### CentOS, Fedora y Red Hat
+1. Instrucciones: [click](https://nodejs.org/en/download/package-manager/#centos-fedora-and-red-hat-enterprise-linux)
+
+### Otras distros
+
+Ya deberías saberlo :)
 
 **Recursos adicionales:**
 
-* Recurso adicional 1
-* Seccion 1
-  * Sección 2
+* Basica prueba de nodejs [](https://nodejs.org/en/docs/guides/getting-started-guide/)
+* Guia de node.js [guía](https://nodejs.dev/learn)
