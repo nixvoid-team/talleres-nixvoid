@@ -39,5 +39,5 @@ Ya deberías saberlo :)
 
 **Recursos adicionales:**
 
-* Basica prueba de nodejs https://nodejs.org/en/docs/guides/getting-started-guide/
-* Guia de node.js [guía](https://nodejs.dev/learn)
+* [Basica prueba de nodejs](https://nodejs.org/en/docs/guides/getting-started-guide/)
+* [Guia de node.js](https://nodejs.dev/learn)
