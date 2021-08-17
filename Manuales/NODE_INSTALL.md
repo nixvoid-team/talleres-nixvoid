@@ -31,7 +31,7 @@ apt-get install -y nodejs
 ```
 
 ### CentOS, Fedora y Red Hat
-1. Instrucciones: [click](https://nodejs.org/en/download/package-manager/#centos-fedora-and-red-hat-enterprise-linux)
+1. Instrucciones: https://nodejs.org/en/download/package-manager/#centos-fedora-and-red-hat-enterprise-linux
 
 ### Otras distros
 
@@ -39,5 +39,5 @@ Ya deberías saberlo :)
 
 **Recursos adicionales:**
 
-* Basica prueba de nodejs [](https://nodejs.org/en/docs/guides/getting-started-guide/)
+* Basica prueba de nodejs https://nodejs.org/en/docs/guides/getting-started-guide/
 * Guia de node.js [guía](https://nodejs.dev/learn)
