@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  </head>
+  <body>
+      <!--- Documentación:  https://bulma.io/documentation/overview/start/ -->
+  <section id="app" class="section">
+    <div class="container">
+      <h1 class="title">
+        Hello World
+      </h1>
+      <p class="subtitle">
+        My first website with <strong>Bulma</strong>!
+      </p>
+      <button class="button is-primary" @click="toggleSeen" >{{seen?'Ocultar':'Mostrar'}}</button>
+      
+      <div v-show="seen">Now you see me (FAKE)</div>
+      <div v-if="seen">Now you see me</div>
+      <span v-else>Don't see me</span>
+      <ol type="1" >
+        <li v-for=" (todo , index) in todos"  :key="todo.id" >{{ todo.text }}-{{index}}</li>
+      </ol>
+      <ol type="1" >
+          Datos:
+        <li v-for=" (value , key) in person"  :key="key" >{{ key }}:{{value}}</li>
+      </ol>
+      <input v-model="email" /> 
+      <input v-model="email" /> 
+     <div>
+        Su email: {{email}}
+     </div>
+     <button class="button" :class="{'is-primary': seen}" >Se ve</button>
+     <button class="button" :style="{backgroundColor: color}" >Se ve</button>
+    </div>
+  </section>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+
+      const Options = {
+          data() {
+              return {
+                  color:'#dbdbdb',
+                seen: false,
+                todos: [
+                    { id: 1, text: 'Learn JavaScript' },
+                    { id: 2, text: 'Learn Vue' },
+                    { id: 3, text: 'Build something awesome' }
+                ],
+                person: {
+                    " Nombre ": 'Pedro',
+                    " Edad ": 25
+                },
+                email: "default@correo.com"
+              }
+          },
+          methods: {
+              toggleSeen(){
+                  this.seen = ! this.seen
+              }
+          }
+      }
+
+      // selector css (#app) 
+      Vue.createApp(Options).mount('#app')
+  </script>
+  </body>
+</html>
