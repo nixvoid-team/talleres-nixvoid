@@ -41,3 +41,7 @@ Ya deberías saberlo :)
 
 * [Basica prueba de nodejs](https://nodejs.org/en/docs/guides/getting-started-guide/)
 * [Guia de node.js](https://nodejs.dev/learn)
+
+**Hecho por:**
+- Diego Lopez
+- Misael Abanto
