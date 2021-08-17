@@ -17,4 +17,4 @@ Se recomienda que los asistentes puedan crear sus propios repositorios en caso d
 ## Manuales
 
 Tenemos una carpeta de [manuales](./Manuales) donde encontrarán instrucciones que requerirán aplicar antes o durante un taller/curso:
- 1. (Instalación de Node.js)[./Manuales/NODE_INSTALL.md]
+ 1. [Instalación de Node.js](./Manuales/NODE_INSTALL.md)
