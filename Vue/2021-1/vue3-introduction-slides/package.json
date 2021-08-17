@@ -1,0 +1,57 @@
+{
+  "name": "slidev-theme-vuetiful",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Thorsten Lünborg",
+    "url": "https://www.linusb.org"
+  },
+  "repository": "https://www.github.com/linusborg/slidev-theme-vuetiful",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "//": "Learn more: https://sli.dev/themes/write-a-theme.html",
+  "scripts": {
+    "dev": "slidev example.md --open",
+    "build": "slidev build example.md",
+    "export": "slidev export example.md",
+    "screenshot": "slidev export example.md --format png"
+  },
+  "slidev": {
+    "colorSchema": "both",
+    "highlighter": "shiki",
+    "defaults": {
+      "fonts": {
+        "sans": "Source Sans Pro",
+        "serif": "IBM Plex Serif",
+        "mono": "IBM Plex Mono",
+        "weights": [
+          "200",
+          "400",
+          "600"
+        ]
+      },
+      "hightlighter": "shiki"
+    }
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "slidev": ">=0.19.3"
+  },
+  "dependencies": {
+    "@linusborg/eslint-config": "^0.1.0",
+    "@slidev/types": "^0.20.4",
+    "codemirror-theme-vars": "^0.1.1",
+    "eslint": "^7.28.0",
+    "lodash-es": "^4.17.21",
+    "prettier": "^2.3.1",
+    "prism-theme-vars": "^0.2.2",
+    "theme-vitesse": "^0.1.12"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.22.7",
+    "@types/node": "^15.12.2",
+    "typescript": "^4.3.2"
+  }
+}

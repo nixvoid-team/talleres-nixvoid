@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <!--- Documentación: https://v3.vuejs.org/guide/introduction.html -->
+    <div id="app">
+      <div>
+        Contador:   {{counter}}
+      </div>
+      <div>
+        Mensaje: {{message}}
+      </div>
+      <div>
+        Mensaje Cambiado: {{message.replace("H", "")}}
+      </div>
+      <div>
+          Condicional en una linea: {{true?"Verdadero":"Falso"}}
+      </div>
+      <div v-text="counter"></div>
+      <div  v-bind:title="counter">
+        Test
+        </div>
+        <div>
+            El usuario ha hecho click  {{clickCounter}} veces.
+        </div>
+        <button v-on:click="doClick()">
+            Haz Click
+        </button>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+
+
+        const Options = {
+            data() {
+                return {
+                    counter: 0,
+                    clickCounter:0,
+                    message: "Hola mundo"
+                }
+            },
+            mounted() {
+                console.log("Se acaba de montar")
+                setInterval(() => {
+                    this.upCount()
+                }, 1000)
+            },
+            methods: {
+                upCount(){
+                    this.counter = this.counter+1
+                },
+                doClick(){
+                    this.clickCounter++;
+                    console.log("El usuario ha hecho click")
+                }
+            }
+        }
+
+        // selector css (#app) 
+        Vue.createApp(Options).mount('#app')
+    </script>
+</body>
+</html>
