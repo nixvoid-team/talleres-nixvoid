@@ -13,3 +13,8 @@ Los ejemplos de estos talleres están dirigidos para los asistentes de los talle
 ## Recomendaciones
 
 Se recomienda que los asistentes puedan crear sus propios repositorios en caso de que se realicen proyectos propios en equipos dentro de un taller.
+
+## Manuales
+
+Tenemos una carpeta de [manuales](./Manuales) donde encontrarán instrucciones que requerirán aplicar antes o durante un taller/curso:
+ 1. (Instalación de Node.js)[./Manuales/NODE_INSTALL.md]
