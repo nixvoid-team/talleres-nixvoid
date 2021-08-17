@@ -47,7 +47,7 @@ Puedes usar expresiones JS
 
 ---
 
-### DIRECTIVA
+### DIRECTIVAS
 
 
 
@@ -231,11 +231,6 @@ Es común que una aplicación se organice en un árbol de componentes anidados:
 
 
 Por ejemplo, puede tener componentes para un encabezado, barra lateral y área de contenido, cada uno de los cuales normalmente contiene otros componentes para enlaces de navegación, publicaciones de blog, etc.
-
-
----
-
-
 
 
 ---
