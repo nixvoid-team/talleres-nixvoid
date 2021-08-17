@@ -18,14 +18,14 @@ El objetivo de este manual es tener instalado en el sistema operativo **Node.js*
 ## Para Linux
 Si quieres revisar por ti mismo anda a la [Guía de instalación general](https://nodejs.org/en/download/package-manager/)
 
-### Debian and Ubuntu
-1. Ir a la página [Instrucciones de Instalación](https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions)
+### Debian y Ubuntu
+1. Ir a la página [Instrucciones de Instalación](https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions), ahí encontrarás diferentes versiones.
 2. Para instalar **Node.js v16.x**:
 ```sh
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-# Using Debian, as root
+# Usando Debian, como root
 curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 apt-get install -y nodejs
 ```
