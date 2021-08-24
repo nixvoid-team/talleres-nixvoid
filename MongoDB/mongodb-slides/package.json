@@ -10,5 +10,8 @@
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*"
   },
-  "name": "mongodb-slides"
+  "name": "mongodb-slides",
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
 }
