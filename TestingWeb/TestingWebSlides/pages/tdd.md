@@ -1,14 +1,28 @@
+---
+layout: two-cols
+---
+
 # TDD: Test Driven Development
 
-<v-click>
-¿Alguien puede traducirlo?
-</v-click>
+<v-clicks>
+
+- ¿En qué momento se deberían realizar las pruebas?
+- ¿Alguien puede traducirlo?
+
+</v-clicks>
 
 ## Ciclo de TDD
 
 1. ❌ Test fail
 2. ✅ Test pass
 3. 🔨 Code refactor
+
+::right::
+
+<br>
+<br>
+<br>
+<br>
 
 ## Reglas[^1]
 
