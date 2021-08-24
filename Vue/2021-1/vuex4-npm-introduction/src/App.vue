@@ -11,10 +11,11 @@
         <p class="subtitle">
           App agenda
         </p>
+        <div>
+        <input v-model="username" class="input is-link" type="text" placeholder="Nombre del usuario">
+        </div>
       </div>
-      <div class="container">
-        <newActivity/>
-      </div>
+
       <div class="container pt-4">
         <table-activities/>
       </div>
@@ -23,13 +24,33 @@
 </template>
 
 <script>
-import newActivity from '../src/components/NewActivity.vue'
 import tableActivities from '../src/components/TableActivities.vue'
+import { mapMutations, mapState} from 'vuex'
 export default {
   name: 'App',
   components: {
-    newActivity: newActivity,
     tableActivities: tableActivities
+  },
+  async created(){
+    await this.$store.dispatch("auth/fetchUser")
+  },
+  computed:{
+    ...mapState('auth',['user']),
+    username: {
+      // getter
+      get() {
+        return this.$store.getters["auth/username"]
+      },
+      // setter
+      set(newValue) {
+        this.setUsername(newValue)
+      }
+    },
+  },
+  methods:{
+    ...mapMutations('auth',{
+      setUsername:'SET_USERNAME'
+    })
   }
 }
 </script>
