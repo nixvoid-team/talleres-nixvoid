@@ -2,11 +2,9 @@
 
 - Es una base de datos no relacional (No-SQL)
 - Genera un ID automático (`ObjectId` o `_id`)
-- 
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+- Está basado en documentos tipo JSON
+- Posee clientes en los lenguajes más populares
+- Permite realizar consultas complejas
 
 <br>
 <br>
