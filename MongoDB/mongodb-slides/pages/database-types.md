@@ -20,7 +20,7 @@ layout: two-cols
 
 <v-click>
 
-| CODIGO    | NOMBRE_COMPLETO | CRÉDITOS |
+| CODIGO    | NOMBRE_COMPLETO | CREDITOS |
 | --------- | --------------- | -------- |
 | 20171124B | Misael Abanto   | 60       |
 | 20181434A | Carlos Lopez    | 45       |
@@ -35,11 +35,10 @@ layout: two-cols
 
 <v-clicks>
 
-- Los datos están organizados en colecciones
-- Las colecciones son un conjunto de documentos
-- Cada documento consta del nombre de una propiedad y su valor
-- Un documento puede tener a su vez otro documento _anidado_
-
+- Los datos no están organizados en tablas
+- Las colecciones son un conjunto de objetos, nodos o documentos
+- Cada objeto, nodo o documento consta del nombre de una propiedad y su valor
+- Un objeto, nodo o documento puede tener a su vez otro
 
 </v-clicks>
 <v-click>
@@ -64,6 +63,13 @@ layout: two-cols
   "codigo": "20162434F",
   "nombreCompleto": "Italo Contreras",
   "creditos": "30"
+}
+```
+```json
+{
+  "<field>": "<value>",
+  "<property>": "<value>",
+  "<key>": "<subdocument>",
 }
 ```
 
