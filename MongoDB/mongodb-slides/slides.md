@@ -17,15 +17,22 @@ info: |
 
   Learn more at [Sli.dev](https://sli.dev)
 src: ./pages/cover.md
-
 ---
+
 ---
 src: ./pages/database.md
+---
 
 ---
+src: ./pages/database-swebok.md
+---
+
+---
+src: ./pages/database-types.md
+---
+
 ---
 src: ./pages/page3.md
-
 ---
 
 # Navigation
