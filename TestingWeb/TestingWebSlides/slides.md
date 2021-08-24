@@ -17,16 +17,13 @@ info: |
 
   Learn more at [Sli.dev](https://sli.dev)
 ---
+# Taller de Testing Web
 
-# Welcome to Slidev
+Expositores:
 
-Presentation slides for developers
+Misael Abanto
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
+Giro Pinto
 
 <div class="abs-br m-6 flex gap-2">
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
@@ -42,6 +39,22 @@ Presentation slides for developers
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
+
+---
+src: ./pages/agenda.md
+---
+---
+src: ./pages/testing.md
+---
+
+---
+src: ./pages/testing-types.md
+---
+
+---
+src: ./pages/tdd.md
+---
+
 
 ---
 
