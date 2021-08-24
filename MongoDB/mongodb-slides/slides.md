@@ -35,6 +35,10 @@ src: ./pages/database-types.md
 src: ./pages/mongodb.md
 ---
 
+---
+src: ./pages/mongodb-install.md
+---
+
 # Navigation
 
 Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)

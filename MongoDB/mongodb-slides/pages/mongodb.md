@@ -4,12 +4,12 @@
 - Genera un ID automático (`ObjectId` o `_id`)
 - Está basado en documentos tipo JSON
 - Posee clientes en los lenguajes más populares
-- Permite realizar consultas complejas
+- Permite realizar consultas complejas de forma simple
 
 <br>
 <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+Más acerca de [MongoDB](https://www.mongodb.com/)
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
