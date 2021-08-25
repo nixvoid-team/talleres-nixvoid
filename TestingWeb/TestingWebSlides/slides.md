@@ -63,6 +63,10 @@ src: ./pages/curve-image.md
 src: ./pages/tdd-image.md
 ---
 
+---
+src: ./pages/code-coverage.md
+---
+
 
 
 ---
