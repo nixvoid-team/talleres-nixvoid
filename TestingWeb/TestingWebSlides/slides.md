@@ -56,8 +56,13 @@ src: ./pages/tdd.md
 ---
 
 ---
+src: ./pages/curve-image.md
+---
+
+---
 src: ./pages/tdd-image.md
 ---
+
 
 
 ---

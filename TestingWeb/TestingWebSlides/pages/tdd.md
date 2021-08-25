@@ -2,6 +2,9 @@
 layout: two-cols
 ---
 
+<template v-slot:default>
+
+
 # TDD: Test Driven Development
 
 <v-clicks>
@@ -11,32 +14,67 @@ layout: two-cols
 
 </v-clicks>
 
+<div v-click="3">
+
+<br>
+<br>
+
 ## Ciclo de TDD
+
+<br>
+
+<v-clicks at="4">
 
 1. ❌ Test fail
 2. ✅ Test pass
 3. 🔨 Code refactor
 
-::right::
+</v-clicks>
+
+</div>
+
+</template>
+<template v-slot:right>
+
+
+<div v-click="7">
+
+## Reglas
 
 <br>
-<br>
-<br>
-<br>
 
-## Reglas[^1]
+<v-clicks at="8">
 
 1. Sólo se escribe código adicional si hay una prueba que falle
 2. Se evita al máximo la duplicidad del código
 
+</v-clicks>
+
+<br>
+
+</div>
+
+<div v-click="10">
+
 ## Preguntas
+
+<br>
+
+<v-clicks at="11">
 
 - ¿Cómo puedo escribir mi primer test?
 - ¿Qué significa código suficiente?
 - ¿Cuándo y cómo refactorizar?
 - ¿En cuántos pasos puedes meter a un elefante en una refrigeradora?
 
-[^1]: Kent Beck
+</v-clicks>
+
+</div>
+
+</template>
+
+
+
 
 <!--
 Aplicar el TDD puede ser difícil de aplicar en novatos
