@@ -1,6 +1,8 @@
-import { render, screen } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 
 import { CounterButton } from './counter-button'
+
+afterEach(cleanup)
 
 describe('CounterButton', () => {
   it('should render', () => {
@@ -24,7 +26,7 @@ describe('CounterButton', () => {
       type: 'increment'
     };
     const counterButtonRendered = render(<CounterButton {...props}/>);
-    const minusFound = await counterButtonRendered.findByText('+');
-    expect(minusFound).toBeTruthy();
+    const plusFound = await counterButtonRendered.findByText('+');
+    expect(plusFound).toBeTruthy();
   })
 })

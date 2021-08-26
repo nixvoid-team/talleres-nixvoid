@@ -1,5 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import { ValueViewer } from './value-viewer';
+
+
+afterEach(cleanup)
+
 
 describe('ValueViewer', () => {
   it('should show a initial value of zero', async () => {
