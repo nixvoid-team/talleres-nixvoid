@@ -5,10 +5,10 @@ export const CounterButton = (props) => {
   const buttonAction = ()=>{
     
     if( props.type === 'increment'){
-      props.onChangeValue(1)
+      props.onChangeValue(props.value+1)
       
     }else{
-      props.onChangeValue(-1)
+      props.onChangeValue(props.value-1)
     }
     
   }

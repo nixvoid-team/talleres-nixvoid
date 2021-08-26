@@ -13,9 +13,9 @@ function App() {
   }
   return (
     <div className="App">
-      <CounterButton type={'increment'} onChangeValue={changeValue}/>
+      <CounterButton type={'increment'} onChangeValue={changeValue} value={value}/>
       <ValueViewer value={value}/>
-      <CounterButton type={'decrement'} onChangeValue={changeValue}/>
+      <CounterButton type={'decrement'} onChangeValue={changeValue} value={value}/>
     </div>
   );
 }

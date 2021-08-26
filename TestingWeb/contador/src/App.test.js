@@ -33,7 +33,7 @@ describe('App', () => {
   })
   it('should increment by one the value every time u click the increment type button', async () =>{
     
-    const plusFound = await screen.findByText('+1')
+    const plusFound = await screen.findByText('+')
     for(let i=1 ; i<5 ; i++){
       fireEvent.click(plusFound)
       const valueViewer = await screen.findByText(i.toString())
