@@ -29,4 +29,15 @@ describe('CounterButton', () => {
     const plusFound = await counterButtonRendered.findByText('+');
     expect(plusFound).toBeTruthy();
   })
+  it('should call to onChangeValue when it\'s clicked', async () => {
+    const onClickMock = jest.fn();
+    const props = {
+      type: 'increment',
+      onChangeValue: onClickMock
+    };
+    const counterButtonRendered = render(<CounterButton {...props}/>);
+    const plusFound = await counterButtonRendered.findByText('+');
+    fireEvent.click(plusFound);
+    expect(onClickMock).toBeCalledTimes(1);
+  })
 })
