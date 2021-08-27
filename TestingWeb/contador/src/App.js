@@ -7,15 +7,15 @@ import './App.css';
 function App() {
 
   const [ value , setValue ]= useState(0)
-  const changeValue = (value) => {
-    const newValue = value
-    setValue(newValue)
+  const [ modifiedBy , setModifiedBy ]= useState(0)
+  const changeValue = (newValue) => {
+    setValue(newValue + value)
   }
   return (
     <div className="App">
-      <CounterButton type={'increment'} onChangeValue={changeValue} value={value}/>
+      <CounterButton type={'increment'} onChangeValue={changeValue} value={modifiedBy}/>
       <ValueViewer value={value}/>
-      <CounterButton type={'decrement'} onChangeValue={changeValue} value={value}/>
+      <CounterButton type={'decrement'} onChangeValue={changeValue} value={modifiedBy}/>
     </div>
   );
 }

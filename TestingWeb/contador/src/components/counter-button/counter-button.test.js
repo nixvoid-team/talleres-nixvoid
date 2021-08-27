@@ -40,4 +40,16 @@ describe('CounterButton', () => {
     fireEvent.click(plusFound);
     expect(onClickMock).toBeCalledTimes(1);
   })
+  it('should call to onChangeValue with value as argument', async () => {
+    const onClickMock = jest.fn();
+    const props = {
+      type: 'decrement',
+      value: 5,
+      onChangeValue: onClickMock
+    };
+    const counterButtonRendered = render(<CounterButton {...props}/>);
+    const plusFound = await counterButtonRendered.findByText('-');
+    fireEvent.click(plusFound);
+    expect(onClickMock).toHaveBeenCalledWith(-5);
+  })
 })

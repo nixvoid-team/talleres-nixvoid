@@ -32,7 +32,6 @@ describe('App', () => {
     expect(valueViewer).toBeTruthy()
   })
   it('should increment by one the value every time u click the increment type button', async () =>{
-    
     const plusFound = await screen.findByText('+')
     for(let i=1 ; i<5 ; i++){
       fireEvent.click(plusFound)
@@ -40,6 +39,13 @@ describe('App', () => {
       expect(valueViewer).toBeTruthy()
     }
     
+  })
+  it('should increment by sapecific value when u click the increment type button', async () =>{  
+    const modifiedBy = 7;
+    const plusFound = await screen.findByText('+')
+    fireEvent.click(plusFound)
+    const valueViewer = await screen.findByText(7)
+    expect(valueViewer).toBeTruthy()
   })
 })
 
