@@ -21,7 +21,7 @@ describe('App', () => {
   
     const plusFound = await screen.findByText('+');
     fireEvent.click(plusFound) 
-    const valueViewer = await screen.findByText('+1')
+    const valueViewer = await screen.findByText('1')
     expect(valueViewer).toBeTruthy()
   })
   it('should decrement the zero by one when u click the increment type button', async () => {
