@@ -60,6 +60,18 @@ src: ./views/run-options.md
 ---
 
 ---
+src: ./views/open-options.md
+---
+
+---
+src: ./views/interaction.md
+---
+
+---
+src: ./views/open-options.md
+---
+
+---
 src: ./views/project-requirements.md
 ---
 
