@@ -1,4 +1,3 @@
-
 # Abrir cypress
 
 <br>
@@ -28,4 +27,3 @@ $ npm run cypress:open
 ```bash
 $ yarn cypress:run
 ```
-
