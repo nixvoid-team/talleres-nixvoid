@@ -1,0 +1,19 @@
+{
+  "name": "3dish",
+  "version": "1.0.0",
+  "description": "Un proyecto sobre carta de platos con RA",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "misaelabanto",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
