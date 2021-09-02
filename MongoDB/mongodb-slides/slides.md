@@ -71,7 +71,7 @@ layout: section
 
 # Importación, exportación y consulta de datos
 
-BSON, JSON, importación y exportación de datos y consultas básicas
+BSON, JSON y consultas básicas
 
 
 ---
@@ -366,8 +366,18 @@ Help
 # Manejo de los Datos
 
 ## Creación
-Puede crear colecciones e insertar datos con el siguiente comando:
+El método insertOne () le permite insertar un solo documento en una colección.
 
+El método insertOne () tiene la siguiente sintaxis:
+
+```shell {all|2|1-6|9|all}
+db.collection.insertOne(
+   <document>,
+   { writeConcern: <document>}
+)
+```
+
+En el siguiente ejemplo
 - db se refiere a la base de datos actual en uso.
 - empleado es el nombre de la colección.
 - insertOne es el método para insertar un documento en la colección.
@@ -376,6 +386,28 @@ Puede crear colecciones e insertar datos con el siguiente comando:
 db.employee.insertOne ({nombre: "marca"}); 
 ```
 
+
+---
+
+## Lectura
+
+El método find () encuentra los documentos que satisfacen una condición especificada y devuelve un cursor a los documentos coincidentes.
+
+A continuación se muestra la sintaxis del método find ():
+
+```shell {all|2|1-6|9|all}
+db.collection.find(query, projection)
+```
+
+Utilice  método de búsqueda para obtener los datos de una colección. El método forEach (printjson) los imprimirá con formato JSON
+
+
+```shell {all|2|1-6|9|all}
+db.employee.find (). forEach (printjson)
+```
+
+
+---
 ## Lectura
 Utilice  método de búsqueda para obtener los datos de una colección. El método forEach (printjson) los imprimirá con formato JSON
 
@@ -383,6 +415,7 @@ Utilice  método de búsqueda para obtener los datos de una colección. El méto
 ```shell {all|2|1-6|9|all}
 db.employee.find (). forEach (printjson)
 ```
+
 
 ---
 
