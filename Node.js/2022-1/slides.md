@@ -18,12 +18,12 @@ info: |
   Learn more at [Sli.dev](https://sli.dev)
 ---
 
-# Taller de Node - Sesión 2
+# Taller de JavaScript
 <br>
 <br>
-<h2>Javascript - ES6 - File System - Read Line</h2>
+<h2>Javascript - ES6</h2>
 <br>
-<h3>Rony Hancco</h3>
+<h3>Misael Abanto</h3>
 <h3>Giro Pinto</h3>
 <style>
   h1{
@@ -412,60 +412,3 @@ const {
 ```
 
 ---
-
-# Next Steps
-
-<img src="assets/ts.jpg" class="img1"/>
-<img src="assets/objectoriented.png" class="img2"/>
-<img src="assets/async-await.png" class="img3"/>
-
-<style>
-  .img1{
-    position: absolute;
-    height: 200px;
-    left: 150px;
-  }
-  .img2{
-    position: absolute;
-    top: 300px;
-    left: 250px;
-    height: 225px;
-  }
-  .img3{
-    position: absolute;
-    top:50px;
-    right: 50px;
-    height: 250px;
-  }
-</style>
-
----
-
-# File System
-
-<br>
-<br>
-<h2><a href="https://nodejs.dev/learn/reading-files-with-nodejs" target="_blank">ReadFiles</a></h2>
-<br>
-<br>
-<h2><a href="https://nodejs.dev/learn/reading-files-with-nodejs" target="_blank">WriteFiles</a></h2>
-
-<img src="assets/fs.jpg" class="img1"/>
-
-
-<style>
-  .img1{
-    position: absolute;
-    top: 150px;
-    height: 300px;
-     right: 100px;
-  }
-</style>
-
----
-
-# ReadLine
-
-<br>
-<br>
-<h2><a href="https://nodejs.org/api/readline.html" target="_blank">Read Line doc.</a></h2>
