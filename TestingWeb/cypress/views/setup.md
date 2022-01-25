@@ -22,5 +22,8 @@
 <br>
 
 ```bash
-$npm run cypress:open
+$ npm run cypress:open
+```
+```bash
+$ yarn cypress:run
 ```

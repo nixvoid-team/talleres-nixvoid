@@ -66,9 +66,432 @@ const a: Function = () => {
 <p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+layout: section
 ---
+
+# Importación, exportación y consulta de datos
+
+BSON, JSON y consultas básicas
+
+
+---
+
+# JSON
+
+## JSON
+JavaScript Object Notation (La notación de objetos JavaScript)
+
+## Formato
+- Empiezan y terminan con llaves {}
+- Se separa cada  **clave (key)** y **valor (value)** con un **:** 
+- Se separa cada par de  **clave (key)** y **valor (value)**  con una **,**
+- Las **claves(key)** deben estar entre comillas **" "**
+
+&rarr; En Mongo las **claves (keys)** se llaman **campos (fields)**
+
+
+Más información de  [JSON and BSON](https://www.mongodb.com/json-and-bson)
+
+<!--
+You can have `style` tag in markdown to override the style for the current page.
+Learn more: https://sli.dev/guide/syntax#embedded-styles
+-->
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# JSON
+
+Se representaran de manera notablemente simple en texto: 
+
+```json {all|2|1-6|9|all}
+{
+  "_id": 1,
+  "name" : { "first" : "John", "last" : "Backus" },
+  "contribs" : [ "Fortran", "ALGOL", "Backus-Naur Form", "FP" ],
+  "awards" : [
+    {
+      "award" : "W.W. McDowell Award",
+      "year" : 1967,
+      "by" : "IEEE Computer Society"
+    }, {
+      "award" : "Draper Prize",
+      "year" : 1993,
+      "by" : "National Academy of Engineering"
+    }
+  ]
+}
+```
+
+<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
+
+[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+
+<style>
+.footnotes-sep {
+  @apply mt-20 opacity-10;
+}
+.footnotes {
+  @apply text-sm opacity-75;
+}
+.footnote-backref {
+  display: none;
+}
+</style>
+
+---
+layout: two-cols
+---
+
+# VENTAJAS DE JSON
+
+- Amigable
+
+- Leible
+
+- Familiar
+ 
+
+::right::
+
+# DESVENTAJAS DE JSON
+
+- Consumo de espacio
+
+- Limitado
+
+- Basado en texto
+
+
+---
+
+# BJSON
+
+## BJSON
+Binary JSON
+
+
+## BENEFICIOS
+Cierra la brecha entre la representación binaria y el formato json
+
+Optimizado
+- Velocidad
+- Espacio
+- Flexibilidad
+
+Alta perfomance
+
+
+
+<!--
+You can have `style` tag in markdown to override the style for the current page.
+Learn more: https://sli.dev/guide/syntax#embedded-styles
+-->
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+
+---
+
+# JSON
+
+Los  siguientes son algunos documentos de ejemplo (en sintaxis de estilo JavaScript / Python) y sus correspondientes representaciones BSON.
+
+```json {all|2|1-6|9|all}
+{"hello": "world"} →
+
+\x16\x00\x00\x00           // total document size
+\x02                       // 0x02 = type String
+hello\x00                  // field name
+\x06\x00\x00\x00world\x00  // field value
+\x00                       // 0x00 = type EOO ('end of object')
+```
+
+
+```json {all|2|1-6|9|all}
+{"BSON": ["awesome", 5.05, 1986]} →
+
+ \x31\x00\x00\x00
+ \x04BSON\x00
+ \x26\x00\x00\x00
+ \x02\x30\x00\x08\x00\x00\x00awesome\x00
+ \x01\x31\x00\x33\x33\x33\x33\x33\x33\x14\x40
+ \x10\x32\x00\xc2\x07\x00\x00
+ \x00
+ \x00
+```
+
+<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
+
+[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+
+<style>
+.footnotes-sep {
+  @apply mt-20 opacity-10;
+}
+.footnotes {
+  @apply text-sm opacity-75;
+}
+.footnote-backref {
+  display: none;
+}
+</style>
+
+
+---
+layout: two-cols
+---
+# JSON
+
+## Códificación:
+UTF-8 String
+
+## Datos soportados
+String, Boolean, Number, Array
+
+## Lectura
+Humano y Máquina
+ 
+
+::right::
+
+# BJSON
+## Códificación:
+Binario
+
+## Datos soportados
+String, Boolean, Number (Integer, Long, Float, ...), Array, Date, Raw Binary
+
+## Lectura
+Solo Máquina
+
+
+---
+
+# JSON
+
+## Códificación:
+UTF-8 String
+
+## Datos soportados
+String, Boolean, Number, Array
+
+## Lectura
+Humano y Máquina
+ 
+
+::right::
+
+# BJSON
+## Códificación:
+Binario
+
+## Datos soportados
+String, Boolean, Number (Integer, Long, Float, ...), Array, Date, Raw Binary
+
+## Lectura
+Solo Máquina
+
+
+---
+
+# Resumen
+
+## BJSON
+
+Mongo guarda data en BJSON internamente y sobre la red
+
+## JSON
+Puede ser guardado nativamente y lo puede retornar MongoDB
+
+## CARACTERISTICAS ADICIONALES
+MongoBD nos provee flexibilidad y velocidad
+
+
+---
+layout: section
+---
+# Comandos básicos para el shell de Mongo
+
+---
+
+# Manejo de la BD
+Ejecute el comando db para ver la base de datos con la que está trabajando actualmente
+
+```shell {all|2|1-6|9|all}
+db
+```
+
+Ejecute el comando use para cambiar a una base de datos diferente. Si no tiene una base de datos, aprenda a crear una nueva base de datos .
+
+```shell {all|2|1-6|9|all}
+use company
+```
+
+Utilice el comando show dbs para mostrar todas las bases de datos
+
+```shell {all|2|1-6|9|all}
+show dbs
+```
+
+Un comando importante le ayudará a trabajar con el shell de Mongo fácilmente: el comando de ayuda. Ejecute el comando de ayuda para obtener una lista de las opciones de ayuda disponibles en el shell de mongo.
+```shell {all|2|1-6|9|all}
+Help
+```
+
+
+---
+
+# Manejo de los Datos
+
+## Creación
+El método insertOne () le permite insertar un solo documento en una colección.
+
+El método insertOne () tiene la siguiente sintaxis:
+
+```shell {all|2|1-6|9|all}
+db.collection.insertOne(
+   <document>,
+   { writeConcern: <document>}
+)
+```
+
+En el siguiente ejemplo
+- db se refiere a la base de datos actual en uso.
+- empleado es el nombre de la colección.
+- insertOne es el método para insertar un documento en la colección.
+
+```shell {all|2|1-6|9|all}
+db.employee.insertOne ({nombre: "marca"}); 
+```
+
+
+---
+
+## Lectura
+
+El método find () encuentra los documentos que satisfacen una condición especificada y devuelve un cursor a los documentos coincidentes.
+
+A continuación se muestra la sintaxis del método find ():
+
+```shell {all|2|1-6|9|all}
+db.collection.find(query, projection)
+```
+
+Utilice  método de búsqueda para obtener los datos de una colección. El método forEach (printjson) los imprimirá con formato JSON
+
+
+```shell {all|2|1-6|9|all}
+db.employee.find (). forEach (printjson)
+```
+
+
+---
+## Lectura
+Utilice  método de búsqueda para obtener los datos de una colección. El método forEach (printjson) los imprimirá con formato JSON
+
+
+```shell {all|2|1-6|9|all}
+db.employee.find (). forEach (printjson)
+```
+
+
+---
+
+# Manejo de los Datos
+
+## Actualización
+El método updateOne () le permite actualizar un solo documento que cumple una condición.
+
+A continuación se muestra la sintaxis del método updateOne ():
+
+```shell {all|2|1-6|9|all}
+db.collection.updateOne(filter, update, options)
+```
+
+
+El operador $ set le permite reemplazar el valor de un campo con un valor especificado. El operador $ set tiene la siguiente sintaxis:
+
+```shell {all|2|1-6|9|all}
+{ $set: { <field1>: <value1>, <field2>: <value2>, ...}}
+```
+
+Puede crear colecciones e insertar datos con el siguiente comando:
+```shell {all|2|1-6|9|all}
+db.employee.updateOne({_id: 1}, {
+    $set: {
+        name: 'Pedro
+    }
+}); 
+```
+
+
+---
+
+## Eliminiación
+
+El método deleteOne () le permite eliminar un solo documento de una colección.
+
+El método deleteOne () tiene la siguiente sintaxis:
+
+```shell {all|2|1-6|9|all}
+db.collection.deleteOne(filter, option)
+```
+
+
+Por Ejemplo
+
+```shell {all|2|1-6|9|all}
+db.employee.deleteOne({nombre: "marca"}); 
+```
+
+
+---
+
+
+---
+
+# Code
+
+
+
+<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
+
+[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+
+<style>
+.footnotes-sep {
+  @apply mt-20 opacity-10;
+}
+.footnotes {
+  @apply text-sm opacity-75;
+}
+.footnote-backref {
+  display: none;
+}
+</style>
+
 
 # Code
 
@@ -104,6 +527,7 @@ function updateUser(id: number, update: User) {
   display: none;
 }
 </style>
+
 
 ---
 
