@@ -58,3 +58,6 @@ src: ./views/oldEvents.md
 src: ./views/betterEvents.md
 ---
 
+---
+src: ./views/fetch.md
+---
