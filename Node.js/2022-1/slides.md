@@ -125,7 +125,6 @@ const variableName
 ---
 
 # Arreglos
-
 <br>
 
 ```js
@@ -151,6 +150,8 @@ const object = {
 }
 
 ```
+
+
 ---
 layout: center
 class: 'text-center'
