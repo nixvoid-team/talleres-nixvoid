@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="center-div">
+            <h1>Titulo</h1>
+        </div>
+        <div class="center-div">
+            <h1>Titulo 1</h1>
+        </div>
+        <div class="center-div item-a">
+            <h1>Titulo 2</h1>
+        </div>
+        <div class="center-div">
+            <h1>Titulo 3</h1>
+        </div>
+        <div class="center-div">
+            <h1>Titulo 4</h1>
+        </div>
+        <div class="center-div">
+            <h1>Titulo 5</h1>
+        </div>
+        <div class="center-div">
+            <h1>Titulo 6</h1>
+        </div>
+        <div class="center-div">
+            <h1>Titulo 7</h1>
+        </div>
+        <div style="align-self: flex-end;" class="center-div">
+            <h1>Titulo 8</h1>
+        </div>
+    </header>
+</body>
+<style>
+    header{
+        margin-bottom: 50px;
+        background-color: bisque;
+        display: grid;
+        height: 200px;
+        grid-template-columns: 200px 60% 1fr;
+        grid-template-rows: 300px 1fr max-content;
+        justify-items: center;
+        align-items: center;
+        column-gap: 10px;
+        row-gap: 30px;
+    }
+    h1{
+        background-color: aquamarine;
+    }
+    p {
+        padding-left: 20px;
+    }
+
+    footer{
+        border-radius: 10px;
+        border: 1px solid red;
+    }
+
+    .center-div{
+        width: 120px;
+    }
+    .item-a{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        justify-self: center;
+        align-self: start;
+    }
+</style>
+</html>

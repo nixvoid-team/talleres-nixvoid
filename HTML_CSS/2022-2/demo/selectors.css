@@ -1,0 +1,26 @@
+
+#post-css{
+   font-size: 45px;
+   color: aquamarine; 
+}
+
+.post-title {
+    color: yellowgreen;
+    font-size: 30px;
+}
+
+div {
+    background-color: blanchedalmond;
+}
+
+* {
+    background-color: black;
+}
+
+[type="text"]{
+    background-color: red;
+}
+
+.post-title,.post-subtitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
