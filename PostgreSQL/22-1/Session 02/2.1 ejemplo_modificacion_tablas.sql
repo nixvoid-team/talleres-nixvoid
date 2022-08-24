@@ -1,0 +1,4 @@
+-- Agregar una columna de activo a la tabla cuentas
+-- Cambiar el nombre de PASSWORD a secret_password
+-- Eliminar la columna activo
+-- Cambiar el nombre de la tabla 'cuentas' a 'usuarios'
