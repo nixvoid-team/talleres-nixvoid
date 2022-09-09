@@ -4,6 +4,7 @@ db.zips.find({state:'NY'}).count()
 
 En sample_training.zips: ¿ Cuantos zips se ubican en una ciudad que empieze con B y termine en M o empize con B y termine en N ?
 
+{$or:[{city:{$regex:/^B.*N$/}},{city:{$regex:/^B.*M$/}}]}
 
 En sample_analytics.customers: ¿Cuantas clientes tienen soo una cuenta?
 
