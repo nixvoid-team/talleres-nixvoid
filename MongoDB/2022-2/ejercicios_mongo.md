@@ -17,7 +17,8 @@ db.transactions.find({transactions:{$elemMatch:{amount:{$gt:9900}}}}).count()
 
 ¿Cuantas cuentas han realizado más de 80 transacciones y menos de 90 transacciones ?
 
-Aggregation
+db.transactions.find({$expr:{$and:[{$gt:[{$size:"$transactions"},80]},{$lt:[{$size:"$transactions"},90]}]}}).count()
+
 
 En sample_training.routes: ¿Cuantas rutas no tienen paradas?
 
